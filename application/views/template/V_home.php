@@ -2,45 +2,45 @@
 <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
   <!--Indicators-->
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-2" data-slide-to="1"></li>
-    <li data-target="#carousel-example-2" data-slide-to="2"></li>
+    <li data-target="#carousel-example-2" data-slide-to="0" class="bg-red active"></li>
+    <li data-target="#carousel-example-2" data-slide-to="1" class="bg-red"></li>
+    <li data-target="#carousel-example-2" data-slide-to="2" class="bg-red"></li>
   </ol>
   <!--/.Indicators-->
   <!--Slides-->
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="view  ">
-        <img class="d-block w-100 " height="500px" src="http://via.placeholder.com/640x360"
+        <img class="d-block w-100 img-fitter" height="500px" data-src="http://via.placeholder.com/640x360"
           alt="First slide">
         <div class="mask rgba-black-light"></div>
       </div>
       <div class="carousel-caption">
-        <h3 class="h3-responsive">Light mask</h3>
+        <h1 class="h1-responsive">Light mask</h1>
 <!--         <p>First text</p> -->
       </div>
     </div>
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100 " height="500px" src="http://via.placeholder.com/640x360"
+        <img class="d-block w-100 img-fitter" height="500px" data-src="http://via.placeholder.com/640x360"
           alt="Second slide">
         <div class="mask rgba-black-light"></div>
       </div>
       <div class="carousel-caption">
-        <h3 class="h3-responsive">Strong mask</h3>
+        <h1 class="h1-responsive">Strong mask</h1>
 <!--         <p>Secondary text</p> -->
       </div>
     </div>
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100 " height="500px" src="http://via.placeholder.com/640x360"
+        <img class="d-block w-100 img-fitter" height="500px" data-src="http://via.placeholder.com/640x360"
           alt="Third slide">
         <div class="mask rgba-black-light"></div>
       </div>
       <div class="carousel-caption">
-        <h3 class="h3-responsive">Slight mask</h3>
+        <h1 class="h1-responsive">Slight mask</h1>
 <!--         <p>Third text</p> -->
       </div>
     </div>
@@ -63,13 +63,16 @@
 <section class="dark-grey">
 <div class="container py-5">
   <div class="row">
-    <div class="col text-center">
-    <h1 class="font-weight-bold dark-grey-text my-4 pb-2 text-center">About Us</h1>
+    <div class="col-12 text-center">
+    <h1 class="font-weight-bold dark-grey-text my-4 pb-2 text-center">Vision & Mision</h1>
     <hr class="w-header bg-blue-hr mb-4">
       <p class="grey-text text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
-      <button type="button" class="btn btn-outline-indigo btn-rounded waves-effect mb-2 ">Read More <i class="fas fa-angle-double-right"></i></button>
+    </div>
+    <div class="col-12 py-4 text-center">
+        <button type="button" class="btn bg-red white-text btn-rounded waves-effect mb-2 ">Read More </button>
+
     </div>
   </div>
   <!--Grid row-->
@@ -77,18 +80,318 @@
 </section>
 
 
+<div class="clearfix"></div>
 <div class="container">
-    <hr class="w-100">
+    <hr class="w-100 m-0">
 </div>
 
-<!-- News-->
+
+<section class="dark-grey">
+  <div class="container py-5">
+    <div class="col ">
+      <h1 class="font-weight-bold dark-grey-text my-2 text-center">News</h1>
+      <hr class="w-header bg-blue-hr">
+      <p class="text-center "> Lorem ipsum dolor sit amet</p>
+    </div>
+    <div class="row">
+      
+      <!--Carousel Wrapper-->
+          <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+          <!--Controls-->
+          <div class="controls-top">
+            <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="bg-red fas fa-chevron-left"></i></a>
+            <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="bg-red fas fa-chevron-right"></i></a>
+          </div>
+          <!--/.Controls-->
+
+          <!--Indicators-->
+          <ol class="carousel-indicators">
+            <li data-target="#multi-item-example" data-slide-to="0" class="bg-red active"></li>
+            <li data-target="#multi-item-example" data-slide-to="1" class="bg-red"></li>
+            <li data-target="#multi-item-example" data-slide-to="2" class="bg-red"></li>
+          </ol>
+          <!--/.Indicators-->
+
+          <!--Slides-->
+          <div class="carousel-inner" role="listbox">
+
+            <!--First slide-->
+            <div class="carousel-item active">
+
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <div class="view overlay">  
+                  <img class="card-img-top"
+                    src="http://via.placeholder.com/640x360"
+                    alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <div class="collapse-content">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                     
+                      <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
+                      <i class="fas fa-share-alt text-blue float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+                      <i class="fas fa-heart text-blue float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <div class="view overlay">  
+                  <img class="card-img-top"
+                    src="http://via.placeholder.com/640x360"
+                    alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <div class="collapse-content">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                     
+                      <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
+                      <i class="fas fa-share-alt text-blue float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+                      <i class="fas fa-heart text-blue float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <div class="view overlay">  
+                  <img class="card-img-top"
+                    src="http://via.placeholder.com/640x360"
+                    alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <div class="collapse-content">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                     
+                      <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
+                      <i class="fas fa-share-alt text-blue float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+                      <i class="fas fa-heart text-blue float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!--/.First slide-->
+
+            <!--Second slide-->
+            <div class="carousel-item">
+
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <div class="view overlay">  
+                  <img class="card-img-top"
+                    src="http://via.placeholder.com/640x360" alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <div class="collapse-content">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                     
+                      <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
+                      <i class="fas fa-share-alt text-blue float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+                      <i class="fas fa-heart text-blue float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <div class="view overlay">  
+                  <img class="card-img-top"
+                    src="http://via.placeholder.com/640x360" alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <div class="collapse-content">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                     
+                      <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
+                      <i class="fas fa-share-alt text-blue float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+                      <i class="fas fa-heart text-blue float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <div class="view overlay">  
+                  <img class="card-img-top"
+                    src="http://via.placeholder.com/640x360" alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <div class="collapse-content">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                     
+                      <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
+                      <i class="fas fa-share-alt text-blue float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+                      <i class="fas fa-heart text-blue float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!--/.Second slide-->
+
+            <!--Third slide-->
+            <div class="carousel-item">
+
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <div class="view overlay">  
+                  <img class="card-img-top"
+                    src="http://via.placeholder.com/640x360" alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <div class="collapse-content">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                     
+                      <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
+                      <i class="fas fa-share-alt text-blue float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+                      <i class="fas fa-heart text-blue float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <div class="view overlay">  
+                  <img class="card-img-top"
+                    src="http://via.placeholder.com/640x360" alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <div class="collapse-content">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                     
+                      <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
+                      <i class="fas fa-share-alt text-blue float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+                      <i class="fas fa-heart text-blue float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <div class="view overlay">  
+                  <img class="card-img-top"
+                    src="http://via.placeholder.com/640x360" alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <div class="collapse-content">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                     
+                      <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
+                      <i class="fas fa-share-alt text-blue float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+                      <i class="fas fa-heart text-blue float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!--/.Third slide-->
+          </div>
+          
+      <!--/.Slides-->
+
+    </div>
+    </div>
+<!--/.Carousel Wrapper-->
+
+  </div>
+</section>
+
+<div class="clearfix"></div>
+<div class="container">
+    <hr class="w-100 m-0">
+</div>
+
+
+<div class="view jarallax" style="height: 15vh;background-attachment:fixed; ">
+<section class="jarallax-img" style="background-image: url('<?= base_url('assets/img/bg_podomoro.jpg')?>'); background-repeat: no-repeat; background-size: cover; background-position: center center;background-attachment:fixed;z-index: 1; ">
+  
+  <div class="mask rgba-black-strong py-5">
+
+    <div class="container text-center my-5">
+
+      <h3 class="font-weight-bold text-center white-text pb-2"><lang>SPMI Document</lang></h3>
+      <hr class="w-header hr-light my-4">
+      <p class="lead text-center white-text pt-2 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+
+      <a href="<?=base_url('document')?>"  class="btn-floating bg-red btn-lg" ><i class="fas fa-link"></i></a>
+
+    </div>
+
+  </div>
+
+</section>
+</div>
+
+
+
+<!-- Event-->
 <section class="">
   <div class="container py-5">
   <!-- Section heading -->
-    <h1 class="font-weight-bold dark-grey-text my-2 pb-2 text-center">News</h1>
+  <div class="col pb-4">
+    <h1 class="font-weight-bold dark-grey-text my-2 text-center">Event</h1>
     <hr class="w-header bg-blue-hr">
     <p class="text-center mb-4"> Lorem ipsum dolor sit amet</p>
   <!-- Section description -->
+  </div>
 
   <!-- Grid row -->
   <div class="row">
@@ -109,12 +412,10 @@
         </div>
 
         <!-- Data -->
-        <div class="news-data d-flex justify-content-between">
-          <a href="#!" class="deep-primary-text">
-            <h6 class="font-weight-bold"><i class="fas fa-user pr-2"></i>Admin</h6>
-          </a>
+        <!-- <div class="news-data d-flex justify-content-between">
+
           <p class="font-weight-bold dark-grey-text"><i class="fas fa-clock-o pr-2"></i>27/02/2018</p>
-        </div>
+        </div> -->
 
         <!-- Excerpt -->
         <h3 class="font-weight-bold dark-grey-text mb-3"><a>Title of the news</a></h3>
@@ -301,42 +602,25 @@
 
     </div>
     <!--Grid column-->
-
+    <div class="col text-center">
+      <button type="button" class="btn bg-red white-text btn-rounded waves-effect my-4 ">View All </button>
+    </div>
   </div>
   <!-- Grid row -->
   </div>
 </section>
-<!-- News -->
+<!-- Event -->
 
 
-
-
-<div class="view jarallax" style="height: 15vh;background-attachment:fixed; ">
-<section class="jarallax-img" style="background-image: url('<?= base_url('assets/img/bg_podomoro.jpg')?>'); background-repeat: no-repeat; background-size: cover; background-position: center center;background-attachment:fixed; ">
-  
-  <div class="mask rgba-black-strong py-5">
-
-    <div class="container text-center my-5">
-
-      <h3 class="font-weight-bold text-center white-text pb-2">Portal Podomoro</h3>
-      <hr class="w-header hr-light my-4">
-      <p class="lead text-center white-text pt-2 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-
-      <a id="play" class="btn-floating btn-default btn-lg" data-toggle="modal" data-target="#modal1"><i class="fas fa-link"></i></a>
-
-    </div>
-
-  </div>
-
-</section>
+<div class="clearfix"></div>
+<div class="container">
+    <hr class="w-100 m-0">
 </div>
 
 
-
-<div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2 py-5" data-ride="carousel">
+<!-- <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2 py-5" data-ride="carousel">
   <h1 class="font-weight-bold black-text mb-4 pb-2 text-center">Recommended Jobs</h1>
   <hr class="w-header bg-blue-hr">
-  <!--Controls-->
   <div class="controls-top control-center">
     <a class="btn-floating btn-default float-left left-30x" href="#carousel-example-multi" data-slide="prev"><i
         class="fas fa-chevron-left"></i></a>
@@ -426,89 +710,271 @@
 
   </div>
 
-</div>
-
-
-<section class="grey lighten-2 py-5">
-  
-  <div class="flex-center">
-
-    <!--First row-->
-    <div class="row">
-
-      <!--First column-->
-      <div class="col-md-3 flex-center">
-        <img src="https://mdbootstrap.com/img/Photos/Template/34.png" class="img-fluid wow fadeIn" data-wow-delay=".2s">
-      </div>
-      <!--/First column-->
-
-      <!--Second column-->
-      <div class="col-md-3 flex-center">
-        <img src="https://mdbootstrap.com/img/Photos/Template/35.png" class="img-fluid wow fadeIn" data-wow-delay=".4s">
-      </div>
-      <!--/Second column-->
-
-      <!--Third column-->
-      <div class="col-md-3 flex-center">
-        <img src="https://mdbootstrap.com/img/Photos/Template/36.png" class="img-fluid wow fadeIn" data-wow-delay=".4s">
-      </div>
-      <!--/Third column-->
-
-      <!--Fourth column-->
-      <div class="col-md-3 flex-center">
-        <img src="https://mdbootstrap.com/img/Photos/Template/37.png" class="img-fluid wow fadeIn" data-wow-delay=".2s">
-      </div>
-      <!--/Fourth column-->
-
+</div> -->
+<!--==========================
+  Team Section
+============================-->
+<section id="team" class="section-bg my-5">
+  <div class="container">
+   
+    <div class="col pb-4">
+      <h1 class="font-weight-bold dark-grey-text my-2 text-center">SPMI Committee</h1>
+      <hr class="w-header bg-blue-hr">
+      <p class="text-center mb-4"> Lorem ipsum dolor sit amet</p>
     </div>
-    <!--/First row-->
+
+    <div class="row justify-content-center row-cols-1 row-cols-md-3">
+
+
+    
+  <div class="col-lg-4 col-md-4 mb-3">
+    <div class="card mb-2 testimonial-card h-100">
+      <div class="card-up indigo lighten-1"></div>
+      <div class="img-card avatar mx-auto white">
+      <img class="rounded-circle w-100" src="http://via.placeholder.com/360x360"
+        alt="Card image cap">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title font-weight-bold">Ferdinand Fassa</h4>
+        <p class="card-text">Kepala Program Studi Teknik Sipil Bidang Manajemen & Rekayasa Konstruksi</p>
+      
+      
+     
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 mb-3">
+    <div class="card mb-2 testimonial-card h-100">
+      <div class="card-up indigo lighten-1"></div>
+      <div class="img-card avatar mx-auto white">
+      <img class="rounded-circle w-100" src="http://via.placeholder.com/360x360"
+        alt="Card image cap">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title font-weight-bold">Dr. Susy Fatena Rostiyanti, ST., M.Sc.</h4>
+        <p class="card-text">Dosen Teknik Sipil Bidang Manajemen & Rekayasa Konstruksi</p>
+      
+      
+     
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 mb-3">
+    <div class="card mb-2 testimonial-card h-100">
+      <div class="card-up indigo lighten-1"></div>
+      <div class="img-card avatar mx-auto white">
+      <img class="rounded-circle w-100" src="http://via.placeholder.com/360x360"
+        alt="Card image cap">
+      </div>
+
+      <div class="card-body">
+        <h4 class="card-title font-weight-bold">Andre Feliks Setiawan, S.T., M.Sc.</h4>
+        <p class="card-text">Dosen Teknik Sipil Bidang Manajemen & Rekayasa Konstruksi</p>
+      
+      
+     
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 mb-3">
+    <div class="card mb-2 testimonial-card h-100">
+      <div class="card-up indigo lighten-1"></div>
+      <div class="img-card avatar mx-auto white">
+      <img class="rounded-circle w-100" src="http://via.placeholder.com/360x360"
+        alt="Card image cap">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title font-weight-bold">Pratama Haditua Reyner Siregar, S.T., M.T.</h4>
+        <p class="card-text">Dosen Teknik Sipil Bidang Manajemen & Rekayasa Konstruksi</p>
+      
+     
+     
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 mb-3">
+    <div class="card mb-2 testimonial-card h-100">
+      <div class="card-up indigo lighten-1"></div>
+      <div class="img-card avatar mx-auto white">
+      <img class="rounded-circle w-100" src="http://via.placeholder.com/360x360"
+        alt="Card image cap">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title font-weight-bold">Seng Hansen, S.T., M.Sc.</h4>
+        <p class="card-text">Dosen Teknik Sipil Bidang Manajemen & Rekayasa Konstruksi</p>
+      
+      
+     
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 mb-3">
+    <div class="card mb-2 testimonial-card h-100">
+      <div class="card-up indigo lighten-1"></div>
+      <div class="img-card avatar mx-auto white">
+      <img class="rounded-circle w-100" src="http://via.placeholder.com/360x360"
+        alt="Card image cap">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title font-weight-bold">Ario Bintang Koesalamwardi </h4>
+        <p class="card-text">Dosen Teknik Sipil Bidang Manajemen & Rekayasa Konstruksi</p>
+      
+      
+     
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 mb-3 ">
+    <div class="card mb-2 testimonial-card h-100">
+      <div class="card-up indigo lighten-1"></div>
+      <div class="img-card avatar mx-auto white">
+      <img class="rounded-circle w-100" src="http://via.placeholder.com/360x360"
+        alt="Card image cap">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title font-weight-bold">Satria Agus Nugroho, S.T., M.T.</h4>
+        <p class="card-text">Dosen Teknik Sipil Bidang Manajemen & Rekayasa Konstruksi</p>
+      
+     
+     
+      </div>
+    </div>
+  </div>
 
   </div>
-  
 </section>
+<!-- #team -->
 
-
-<div class="container pt-5 my-5 ">
-  <section class="p-md-3 mx-md-5 text-center">
-    <h2 class="text-center mx-auto font-weight-bold mb-4 pb-2">HIMA</h2>
-    <hr class="w-header bg-blue-hr">
-    <div class="row py-5">
-     
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="p-4 ">
-          <div class="card-image " style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);border-radius:50%">
-
-            <a href="#!">
-              <div class="text-white d-flex h-100 mask  rgba-green-strong py-4 rounded-circle">
-                
-                <div class="second-content align-self-center mx-auto text-center">
-                 <img src="<?= base_url('assets/img/logohima/ARC-P.png')?>"
-              class="img-fluid rounded-circle card-image" />
-                </div>
-              </div>
-            </a>
-
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="p-4 ">
-          <div class="card-image " style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);border-radius:50%">
-
-            <a href="#!">
-              <div class="text-white d-flex h-100 mask rgba-yellow-strong py-4 rounded-circle">
-                
-                <div class="second-content align-self-center mx-auto text-center">
-                 <img src="<?= base_url('assets/img/logohima/ACC-P.png')?>"
-              class="img-fluid rounded-circle card-image" />
-                </div>
-              </div>
-            </a>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
+<div class="clearfix"></div>
+<div class="container">
+    <hr class="w-100 m-0">
 </div>
+
+<!--==========================
+  Clients Section
+============================-->
+<section id="testimonials">
+  <div class="container py-5">
+
+    <div class="col pb-4">
+      <h1 class="font-weight-bold dark-grey-text my-2 text-center">Testimonials</h1>
+      <hr class="w-header bg-blue-hr">
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <div class="owl-carousel testimonials-carousel wow fadeInUp">
+
+          <div class="testimonial-item items">
+            <img src="http://via.placeholder.com/160x160" class="testimonial-img mr-3" alt="">
+            <h3>SINDY2</h3>
+            <p class="grey-text" style="font-style: italic;letter-spacing: 0.5px;font-size: 14px">Mahasiswi fax</p>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqu
+            </p>
+          </div>
+          <div class="testimonial-item items">
+            <img src="http://via.placeholder.com/160x160" class="testimonial-img mr-3" alt="">
+            <h3>SINDY</h3>
+            <p class="grey-text" style="font-style: italic;letter-spacing: 0.5px;font-size: 14px">Mahasiswi fax</p>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqu
+            </p>
+          </div>
+          <div class="testimonial-item items">
+            <img src="http://via.placeholder.com/160x160" class="testimonial-img mr-3" alt="">
+            <h3>SINDY1</h3>
+            <p class="grey-text" style="font-style: italic;letter-spacing: 0.5px;font-size: 14px">Mahasiswi fax</p>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqu
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- #testimonials -->
+
+<div class="clearfix"></div>
+
+<!--==========================
+  Clients Section
+============================-->
+<section id="clients" class="wow fadeInUp">
+  <div class="container py-5">
+
+    <div class="col pb-4">
+    <h1 class="font-weight-bold dark-grey-text my-2 text-center">Partner Collaborations</h1>
+    <hr class="w-header bg-blue-hr">
+    </div>
+
+    <div class="owl-carousel clients-carousel">
+      <img src="http://via.placeholder.com/660x260" alt="">
+      <img src="http://via.placeholder.com/660x260" alt="">
+      <img src="http://via.placeholder.com/660x260" alt="">
+      <img src="http://via.placeholder.com/660x260" alt="">
+      <img src="http://via.placeholder.com/660x260" alt="">      
+    </div>
+
+  </div>
+</section>
+<!-- #clients -->
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+        loadImgFitter();    
+    });
+
+var owl = $('.testimonials-carousel');
+    owl.owlCarousel({
+        items:1,
+        loop:true,
+        margin:10,
+        autoplay:true,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true
+    });
+    $('.play').on('click',function(){
+        owl.trigger('play.owl.autoplay',[4000])
+    })
+    $('.stop').on('click',function(){
+        owl.trigger('stop.owl.autoplay')
+    })
+
+var owl = $('.clients-carousel');
+    owl.owlCarousel({
+        items:4,
+        loop:true,
+        margin:10,
+        autoplay:true,
+        autoplayTimeout:2500,
+        autoplayHoverPause:true
+    });
+    $('.play').on('click',function(){
+        owl.trigger('play.owl.autoplay',[2500])
+    })
+    $('.stop').on('click',function(){
+        owl.trigger('stop.owl.autoplay')
+    })
+
+function loadImgFitter(){
+    $('.img-fitter').imgFitter({
+
+        // CSS background position
+        backgroundPosition: 'center center',
+
+        // for image loading effect
+        fadeinDelay: 400,
+        fadeinTime: 1200
+
+    });
+  }
+
+</script> 

@@ -16,26 +16,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link href="<?= base_url('assets/css/pu-custom.css')?>" rel="stylesheet">
 	<link href="<?= base_url('assets/css/normalizer.css')?>" rel="stylesheet">
 	<link href="<?= base_url('assets/js/owlcarousel/assets/owl.carousel.min.css')?>" rel="stylesheet">
-	<link rel="stylesheet" href="<?= base_url('assets/js/owlcarousel/assets/owl.theme.default.min.css')?>">
+	<link href="<?= base_url('assets/js/owlcarousel/assets/owl.theme.default.min.css')?>">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
+
 	<script src="<?= base_url('assets/js/jquery-3.4.1.min.js')?>"></script>
 	<!-- <script src="<?= base_url('assets/js/popper.js')?>" type="text/javascript"></script> -->
 	<script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
 	<script src="<?= base_url('assets/js/mdb.min.js')?>"></script>
-	<!-- <script src="<?= base_url('assets/js/owlcarousel/owl.carousel.min.js')?>"></script> -->
+	<script src="<?= base_url('assets/js/owlcarousel/owl.carousel.min.js')?>"></script>
 	<script src="<?= base_url('assets/js/universal-parallax.min.js')?>"></script>
+	<script src="<?= base_url('assets/img-fitter/jquery.imgFitter.js')?>" type="text/javascript"></script>
+	<script src="<?= base_url('assets/js/translation/translation.js'); ?>"></script>
 
+    <!-- JWT Encode -->
+    <script src="<?= base_url('assets/jwt/encode/hmac-sha256.js');?>" type="text/javascript"></script>
+    <script src="<?= base_url('assets/jwt/encode/enc-base64-min.js');?>" type="text/javascript"></script>
+    <script src="<?= base_url('assets/jwt/encode/jwt.encode.js');?>" type="text/javascript"></script>
 
-	<script type="text/javascript">
+    <!-- JWT Decode -->
+    <script src="<?= base_url('assets/jwt/decode/build/jwt-decode.min.js');?>" type="text/javascript"></script>
 
-		$(document).ready(function () {
-
-	        window.base_url_js = "<?= url_blog ?>";//routes url_blogs in index.php
-	       	window.base_url_js_sw = "<?= url_blog_admin ?>"; //routes url_blogs_admin in index.php
-
-	    });
-
-	</script>
 	<style type="text/css">
 	 
 	/*@media (max-width: 740px) {
@@ -90,6 +90,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	.bg-blue{
 	    background-color: #023f87 !important;
 	}
+	.bg-red{
+		background-color: #d71921 !important;
+	}
 	.rgba-gradient {
 	  background: -moz-linear-gradient(45deg, rgb(215, 25, 33), rgb(161, 148, 103) 100%);
 	  background: -webkit-linear-gradient(45deg, rgb(215, 25, 33), rgb(161, 148, 103) 100%);
@@ -104,16 +107,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
-}
+	}
 	</style>
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+            window.base_url_js_server_ws = "<?= url_server_ws; ?>";
+            window.base_url_sign_out = "<?= url_sign_out; ?>";
+            window.url_image = "<?= url_image_lecturer; ?>";
+            window.url_image_students = "<?= url_image_students; ?>";
+            window.base_url_js = "<?= base_url(); ?>";
+
+
+            var la = localStorage.getItem("language");
+            window.current_language = (la=='' || la==null || la === 'undefined') ? "Eng" : la;
+
+
+            // $.fn.select2.defaults.set( "theme", "bootstrap" );
+
+            getCurrentLanguage();
+            UpdateLanguage();
+
+        });
+	</script>
 </head>
 <!-- ======= Body ====== -->
 <body class="scrollbar scrollbar-indigo">
 <!-- ======= Hedear ====== -->
 
 <header class="header">
-
-		<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+		<div id="topbar" class="py-1">
+        <div class="container">
+            <div class="social-links col">
+                <a href="javascript:void(0)" data-lang="Ind" class="btn-change-lang mx-2"><img class="flag-lang " width="20px" src="<?=base_url('assets/img/in.png')?>"> Ind</a>
+                <a href="javascript:void(0)" data-lang="Eng" class="btn-change-lang mx-2"><img class="flag-lang " width="20px" src="<?=base_url('assets/img/en.png')?>"> Eng</a>
+            </div>
+        </div>
+    </div>
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" style="top: 29px">
 
 			<div class="container ">
 				<a href="<?= base_url() ?>" class="navbar-brand nav-logo" style="width: 15%;"><img src="<?= base_url() ?>assets/img/logo-lpmi(1).png" alt="SPMI Podomoro University"></a>
@@ -121,7 +152,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<!-- Collapse button -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
 				aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon bg-blue"></span>
+				<span class="navbar-toggler-icon bg-blue" style="border-radius: 4px"></span>
 				</button>
 
 				<!-- Collapsible content -->
@@ -130,33 +161,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<!-- Links -->
 					<ul class="navbar-nav nav justify-content-center lighten-4 py-2 mr-4">
 						<li class="nav-item px-3">
-							<a href="<?= base_url() ?>" class="nav-link text-uppercase text-blue text-hover-red">Home </a>
+							<a href="<?= base_url() ?>" class="nav-link text-uppercase text-blue text-hover-red"><lang>Home</lang></a>
 						</li>
 						<li class="nav-item px-3 dropdown">
-							<a href="<?= base_url('contact') ?>" class="nav-link text-uppercase text-hover-red dropdown-toggle text-blue" id="navbarDropdownMenuLink-555" 
-								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us </a>
+							<a href="<?= base_url('about') ?>" class="nav-link text-uppercase text-hover-red dropdown-toggle text-blue" id="navbarDropdownMenuLink-555" 
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><lang>About Us</lang></a>
 							<div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink-555">
-								<a class="dropdown-item" href="#">Visi & Mision</a>
-								<a class="dropdown-item" href="#">Organisation  Structure</a>
-								<a class="dropdown-item" href="#">SPMI Committee </a>
-								<a class="dropdown-item" href="#">Target & Program</a>
-								<a class="dropdown-item" href="#">Activity</a>
-								<a class="dropdown-item" href="#">Event</a>
+								<a class="dropdown-item" href="#"><lang>Vision and Mission</lang></a>
+								<a class="dropdown-item" href="#"><lang>Organizational Structure</lang></a>
+								<a class="dropdown-item" href="#"><lang>SPMI Committee</lang></a>
+								<a class="dropdown-item" href="#"><lang>Target and Program</lang></a>
+								<a class="dropdown-item" href="#"><lang>Activity</lang></a>
+								<a class="dropdown-item" href="#"><lang>Event</lang></a>
 							</div>
 						</li>
 						<li class="nav-item px-3">
-							<a href="<?= base_url('about') ?>" class="nav-link text-uppercase text-blue text-hover-red">News </a>
+							<a href="<?= base_url('about') ?>" class="nav-link text-uppercase text-blue text-hover-red"><lang>News</lang></a>
 						</li>
 						<li class="nav-item px-3 dropdown">
 							<a href="<?= base_url('contact') ?>" class="nav-link text-uppercase text-hover-red dropdown-toggle text-blue" id="navbarDropdownMenuLink-555" 
-								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Document</a>
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><lang>Document</lang></a>
 							<div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink-555">
-								<a class="dropdown-item" href="#">Knowledge Base</a>
-								<a class="dropdown-item" href="#">Accreditation</a>
+								<a class="dropdown-item" href="#"><lang>Knowledge Base</lang></a>
+								<a class="dropdown-item" href="#"><lang>Accreditation</lang></a>
 							</div>
 						</li>
 						<li class="nav-item px-3">
-							<a href="<?= base_url('about') ?>" class="nav-link text-uppercase text-blue text-hover-red">Gallery </a>
+							<a href="<?= base_url('gallery') ?>" class="nav-link text-uppercase text-blue text-hover-red"><lang>Gallery</lang></a>
 						</li>
 										
 					</ul>
@@ -305,7 +336,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <a href="#" class="back-to-top indigo-color"><i class="fa fa-chevron-up"></i></a>
 
+
 <!-- scrip js -->
+
+<script>
+
+    $('.btn-change-lang').click(function () {
+        var lang = $(this).attr('data-lang');
+        localStorage.setItem("language",lang);
+        window.location.href = '';
+    });
+
+</script>
+
 <script>
 	new universalParallax().init({
 		speed: 4

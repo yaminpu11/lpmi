@@ -50,43 +50,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'c_dashboard';
-$route['404_override'] = '';
+$route['404_override'] = 'c_dashboard/page_404';
 $route['translate_uri_dashes'] = FALSE;
+// $route['admin'] = 'admin/overview';
+// Sambutan
+$route['greetings'] = 'c_dashboard/sambutan';
+// Visi Misi
+$route['vision-mision'] = 'c_dashboard/visi_misi';
+// Structure
+$route['organizational-structure'] = 'c_dashboard/structure';
+// Dosen
+$route['lecturer'] = 'c_dashboard/dosen';
+//Fasilitas
+$route['facilities'] = 'c_dashboard/fasilitas';
+//Artikel
+$route['news'] = 'c_dashboard/artikel';
+$route['detail-news'] = 'c_dashboard/details_news';
+//Agenda
+$route['event'] = 'c_dashboard/agenda';
+//Mahasiswa
+$route['student'] = 'c_dashboard/mahasiswa';
+//Gallery
+$route['gallery'] = 'c_dashboard/gallery';
+//Penelitian
+$route['research'] = 'c_dashboard/penelitian';
+//Kontak
+$route['contact'] = 'c_dashboard/kontak';
+$route['prospective-student'] = 'c_dashboard/prospective';
+$route['prodi'] = 'c_dashboard/prodi';
+$route['_contact/crud'] = 'c_dashboard/kontak_crud';
+$route['__getLanguagelabels'] = 'c_dashboard/getLanguagelabels';
 
-$route['category/(:num)'] = 'c_dashboard/category/$1';
-$route['details/(:num)'] = 'c_dashboard/details/$1';
-$route['category'] = 'c_dashboard/category';
-$route['about'] = 'c_dashboard/about';
-$route['contact'] = 'c_dashboard/contact';
-$route['search'] = 'c_dashboard/search';
-
-// ==== Read Data ===== //
-$route['__load_about'] = 'c_branda/load_about';
-$route['__details'] = 'c_branda/load_details';
-$route['__load_slide1'] = 'c_branda/load_slide1';
-$route['__load_slide2'] = 'c_branda/load_slide2';
-$route['__load_slide3'] = 'c_branda/load_slide3';
-$route['__load_slide4'] = 'c_branda/load_slide4';
-$route['__load_slide5'] = 'c_branda/load_slide5';
-$route['__load_slide6'] = 'c_branda/load_slide6';
-
-$route['__load_category'] = 'c_branda/load_category';
-$route['__load_categorytop'] = 'c_branda/load_categorytop';
-$route['__load_categorytop1'] = 'c_branda/load_categorytop1';
-$route['__load_recent_post'] = 'c_branda/load_recentPost';
-$route['__load_recent_post1'] = 'c_branda/load_recentPost1';
-$route['__load_recommend'] = 'c_branda/load_recommend';
-$route['__load_recommend1'] = 'c_branda/load_recommend1';
-$route['__load_comment'] = 'c_branda/show_comment';
-$route['__load_childcomment'] = 'c_branda/show_childcomment';
-$route['__load_bycategory'] = 'c_branda/show_bycategory';
-$route['__load_rata'] = 'c_branda/show_rata';
-
-
-$route['__save_contact'] = 'c_branda/save_contact';
-$route['__save_comment'] = 'c_branda/save_comment';
-$route['__save_childcomment'] = 'c_branda/save_childcomment';
-$route['__save_rating'] = 'c_branda/save_rating';
-
-// search
-$route['__details_search'] = 'c_branda/details_search';

@@ -27,7 +27,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $root=(is_https() ? "https://" : "http://").$_SERVER['HTTP_HOST'];
 $root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 $config['base_url']    = "$root";
-
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -161,7 +160,7 @@ $config['composer_autoload'] = FALSE;
 | DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
 |
 */
-$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-()@!+=';
+$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 
 /*
 |--------------------------------------------------------------------------
@@ -381,7 +380,7 @@ $config['encryption_key'] = '';
 |
 */
 $config['sess_driver'] = 'files';
-$config['sess_cookie_name'] = 'ci_blogpu';
+$config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200;
 $config['sess_save_path'] = NULL;
 $config['sess_match_ip'] = FALSE;
