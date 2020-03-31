@@ -1,12 +1,11 @@
 
-function getdataProdiTexting(Type, element) {
+function getDataContent(IDType, element) {
 
-    var url = base_url_js_server_ws+'api-prodi/__getDataProdiTexting';
+    var url = base_url_js+'api-lpmi/__getContentLPMI';
 
     var data = {
         LangCode : current_language,
-        ProdiID : GlobalProdiID,
-        Type : Type
+        IDType : IDType
     };
     var token = jwt_encode(data,'UAP)(*');
     $.post(url,{token:token},function (jsonResult) {

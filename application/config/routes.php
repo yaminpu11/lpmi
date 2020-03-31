@@ -56,28 +56,33 @@ $route['translate_uri_dashes'] = FALSE;
 // Sambutan
 $route['greetings'] = 'c_dashboard/sambutan';
 // Visi Misi
-$route['vision-mision'] = 'c_dashboard/visi_misi';
+$route['vision-mision'] = 'c_dashboard/vision_mision';
 // Structure
 $route['organizational-structure'] = 'c_dashboard/structure';
 // Dosen
-$route['lecturer'] = 'c_dashboard/dosen';
+$route['committee'] = 'c_dashboard/committee';
 //Fasilitas
-$route['facilities'] = 'c_dashboard/fasilitas';
+$route['target-program'] = 'c_dashboard/target_program';
 //Artikel
-$route['news'] = 'c_dashboard/artikel';
+$route['news'] = 'c_dashboard/news';
 $route['detail-news'] = 'c_dashboard/details_news';
 //Agenda
-$route['event'] = 'c_dashboard/agenda';
+$route['event'] = 'c_dashboard/event';
 //Mahasiswa
-$route['student'] = 'c_dashboard/mahasiswa';
+$route['knowledge'] = 'c_dashboard/knowledge';
 //Gallery
-$route['gallery'] = 'c_dashboard/gallery';
+$route['acreditas'] = 'c_dashboard/acreditas';
 //Penelitian
-$route['research'] = 'c_dashboard/penelitian';
+$route['gallery'] = 'c_dashboard/gallery';
+
+
 //Kontak
 $route['contact'] = 'c_dashboard/kontak';
 $route['prospective-student'] = 'c_dashboard/prospective';
 $route['prodi'] = 'c_dashboard/prodi';
 $route['_contact/crud'] = 'c_dashboard/kontak_crud';
 $route['__getLanguagelabels'] = 'c_dashboard/getLanguagelabels';
+
+// ==== API LPMI yamin=== //
+$route['api-lpmi/__getContentLPMI'] = 'api/c_api_lpmi/GetDataContent';
 

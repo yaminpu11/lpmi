@@ -14,8 +14,9 @@
 
         $page = '';
         $data["pageTitle"] = "Dashboard";
-        $data['record']=$this->m_branda->list_trending();
-        $data['getslider']=$this->m_branda->count_slider();
+        // $data['record']=$this->m_branda->list_trending();
+        // $data['getslider']=$this->m_branda->count_slider();
+        $data['visi'] = $this->m_branda->visi();
 
         $content = $this->load->view('template/V_home',$data,true);
         parent::template($content);
@@ -34,13 +35,13 @@
 
             $d = $dataLang[0];
 
-            $data = $this->db->query('SELECT li.IndexName, ll.Label FROM db_lpmi.language_labels ll
-                                                          LEFT JOIN db_lpmi.language_index li ON (ll.LangIndexID = li.ID)
-                                                          WHERE ll.LangID = "'.$d['ID'].'" ')->result_array();
+            $data = $this->db->query('SELECT ci.ContentName, ct.Label FROM db_lpmi.content_type ct
+                  LEFT JOIN db_lpmi.content_index ci ON (ct.LangIndexID = ci.ID)
+                  WHERE ct.LangID = "'.$d['ID'].'" ')->result_array();
 
             $res = array();
             foreach ($data AS $item){
-                $res[$item['IndexName']] = $item['Label'];
+                $res[$item['ContentName']] = $item['Label'];
             }
 
             $result = array(
@@ -63,28 +64,58 @@
           $content = $this->load->view("template/404",'',false);
         }
 
-    function category()
+    function vision_mision()
     {
-      $content = $this->load->view('template/V_category','',true);
+      $data['visi'] = $this->m_branda->visi();
+      $content = $this->load->view('template/V_vision_mision','',true);
       parent::template($content);
     }
 
-    function details()
+    function structure()
     {
-      $this->load->model('iptracker');
-      $content = $this->load->view('template/V_details','',true);
+      $content = $this->load->view('template/coming_soon','',true);
       parent::template($content);
     }
     
-    function about()
+    function committee()
     {
-      $content = $this->load->view('template/V_about','',true);
+      $content = $this->load->view('template/V_committee','',true);
       parent::template($content);
     }
 
-    function contact()
+    function target_program()
     {
-      $content = $this->load->view('template/V_contact','',true);
+      $content = $this->load->view('template/V_target_program','',true);
+      parent::template($content);
+    }
+
+    function news()
+    {
+      $content = $this->load->view('template/V_news','',true);
+      parent::template($content);
+    }
+
+    function event()
+    {
+      $content = $this->load->view('template/V_agenda','',true);
+      parent::template($content);
+    }
+
+    function knowledge()
+    {
+      $content = $this->load->view('template/V_knowledge','',true);
+      parent::template($content);
+    }
+
+    function acreditas()
+    {
+      $content = $this->load->view('template/coming_soon','',true);
+      parent::template($content);
+    }
+
+    function gallery()
+    {
+      $content = $this->load->view('template/V_gallery','',true);
       parent::template($content);
     }
 

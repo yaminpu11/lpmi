@@ -11,7 +11,7 @@
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="view  ">
-        <img class="d-block w-100 img-fitter" height="500px" data-src="http://via.placeholder.com/640x360"
+        <img class="d-block w-100 img-fitter" height="500px" data-src="http://via.placeholder.com/1300x500"
           alt="First slide">
         <div class="mask rgba-black-light"></div>
       </div>
@@ -23,7 +23,7 @@
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100 img-fitter" height="500px" data-src="http://via.placeholder.com/640x360"
+        <img class="d-block w-100 img-fitter" height="500px" data-src="http://via.placeholder.com/1300x500"
           alt="Second slide">
         <div class="mask rgba-black-light"></div>
       </div>
@@ -35,7 +35,7 @@
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100 img-fitter" height="500px" data-src="http://via.placeholder.com/640x360"
+        <img class="d-block w-100 img-fitter" height="500px" data-src="http://via.placeholder.com/1300x500"
           alt="Third slide">
         <div class="mask rgba-black-light"></div>
       </div>
@@ -64,7 +64,7 @@
 <div class="container py-5">
   <div class="row">
     <div class="col-12 text-center">
-    <h1 class="font-weight-bold dark-grey-text my-4 pb-2 text-center">Vision & Mision</h1>
+    <h1 class="font-weight-bold dark-grey-text my-4 pb-2 text-center"><lang>Vision</lang> & <lang>Mission</lang></h1>
     <hr class="w-header bg-blue-hr mb-4">
       <p class="grey-text text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -89,7 +89,7 @@
 <section class="dark-grey">
   <div class="container py-5">
     <div class="col ">
-      <h1 class="font-weight-bold dark-grey-text my-2 text-center">News</h1>
+      <h1 class="font-weight-bold dark-grey-text my-2 text-center"><lang>News</lang></h1>
       <hr class="w-header bg-blue-hr">
       <p class="text-center "> Lorem ipsum dolor sit amet</p>
     </div>
@@ -367,7 +367,7 @@
 
     <div class="container text-center my-5">
 
-      <h3 class="font-weight-bold text-center white-text pb-2"><lang>SPMI Document</lang></h3>
+      <h1 class="font-weight-bold text-center white-text pb-2"><lang>SPMI Document</lang></h1 >
       <hr class="w-header hr-light my-4">
       <p class="lead text-center white-text pt-2 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
 
@@ -387,7 +387,7 @@
   <div class="container py-5">
   <!-- Section heading -->
   <div class="col pb-4">
-    <h1 class="font-weight-bold dark-grey-text my-2 text-center">Event</h1>
+    <h1 class="font-weight-bold dark-grey-text my-2 text-center"><lang>Event</lang></h1>
     <hr class="w-header bg-blue-hr">
     <p class="text-center mb-4"> Lorem ipsum dolor sit amet</p>
   <!-- Section description -->
@@ -618,99 +618,6 @@
 </div>
 
 
-<!-- <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2 py-5" data-ride="carousel">
-  <h1 class="font-weight-bold black-text mb-4 pb-2 text-center">Recommended Jobs</h1>
-  <hr class="w-header bg-blue-hr">
-  <div class="controls-top control-center">
-    <a class="btn-floating btn-default float-left left-30x" href="#carousel-example-multi" data-slide="prev"><i
-        class="fas fa-chevron-left"></i></a>
-    <a class="btn-floating btn-default float-right right-30x" href="#carousel-example-multi" data-slide="next"><i
-        class="fas fa-chevron-right"></i></a>
-  </div>
-
-  <div class="carousel-inner v-2 pt-2" role="listbox">
-
-    <div class="carousel-item active">
-      <div class="col-12 col-md-2">
-        <div class="card card-wrapper mb-2">
-          <div class="card-up" style="background-image: url(<?= base_url('assets/img/jobs/LOGO-AGUNG-PODOMORO-LAND.png')?>); background-size: contain; background-position: center;background-repeat: no-repeat;">
-          
-          </div>
-
-          <div class="card-body mx-2">
-            <p class="card-title font-weight-bold">Marketing</p>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-default btn-md btn-rounded float-right">Button</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-
-      <div class="col-12 col-md-2">
-        <div class=" card card-wrapper mb-2">
-          <div class="card-up" style="background-image: url(<?= base_url('assets/img/jobs/logo-centralpark.png')?>); background-size: contain; background-position: center;background-repeat: no-repeat;">
-          
-          </div>
-          <div class="card-body mx-2">
-            <p class="card-title font-weight-bold">Programer</p>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-default btn-md btn-rounded float-right">Button</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="col-12 col-md-2">
-        <div class="card card-wrapper mb-2">
-          <div class="card-up" style="background-image: url(<?= base_url('assets/img/jobs/logo-neo-soho.png')?>); background-size: contain; background-position: center;background-repeat: no-repeat;">
-         
-          </div>
-          <div class="card-body mx-2">
-            <p class="card-title font-weight-bold">Digital Marketing</p>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the  card's content.</p>
-            <a class="btn btn-default btn-md btn-rounded float-right">Button</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="col-12 col-md-2">
-        <div class="card card-wrapper mb-2">
-          <div class="card-up" style="background-image: url(<?= base_url('assets/img/jobs/logo-neo-soho.png')?>); background-size: contain; background-position: center;background-repeat: no-repeat;">
-            
-          </div>
-          <div class="card-body mx-2">
-            <p class="card-title font-weight-bold">Manajer</p>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-default btn-md btn-rounded float-right">Button</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="col-12 col-md-2">
-        <div class="card card-wrapper mb-2">
-          <div class="card-up" style="background-image: url(http://localhost/podivers/assets/img/jobs/podomoro-university-logo.com.png); background-size: contain; background-position: center;background-repeat: no-repeat;">
-            
-          </div>
-          <div class="card-body mx-2">
-            <p class="card-title font-weight-bold">Supervision</p>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-default btn-md btn-rounded float-right">Button</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-
-  </div>
-
-</div> -->
 <!--==========================
   Team Section
 ============================-->
@@ -718,7 +625,7 @@
   <div class="container">
    
     <div class="col pb-4">
-      <h1 class="font-weight-bold dark-grey-text my-2 text-center">SPMI Committee</h1>
+      <h1 class="font-weight-bold dark-grey-text my-2 text-center"><lang>SPMI Committee</lang></h1>
       <hr class="w-header bg-blue-hr">
       <p class="text-center mb-4"> Lorem ipsum dolor sit amet</p>
     </div>
@@ -857,7 +764,7 @@
   <div class="container py-5">
 
     <div class="col pb-4">
-      <h1 class="font-weight-bold dark-grey-text my-2 text-center">Testimonials</h1>
+      <h1 class="font-weight-bold dark-grey-text my-2 text-center"><lang>Testimonials</lang></h1>
       <hr class="w-header bg-blue-hr">
     </div>
 
@@ -909,7 +816,7 @@
   <div class="container py-5">
 
     <div class="col pb-4">
-    <h1 class="font-weight-bold dark-grey-text my-2 text-center">Partner Collaborations</h1>
+    <h1 class="font-weight-bold dark-grey-text my-2 text-center"><lang>Partner Collaborations</lang></h1>
     <hr class="w-header bg-blue-hr">
     </div>
 
