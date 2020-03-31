@@ -35,7 +35,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- JWT Decode -->
     <script src="<?= base_url('assets/jwt/decode/build/jwt-decode.min.js');?>" type="text/javascript"></script>
-
+    <!-- Api Content -->
+    <script src="<?= base_url('assets/js/provider.js');?>" type="text/javascript"></script>
+    <!-- view pdf -->
+    <script src="<?= base_url('assets/js/pdf.js');?>" type="text/javascript"></script>
 	<style type="text/css">
 	 
 	/*@media (max-width: 740px) {
@@ -90,6 +93,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	.bg-blue{
 	    background-color: #023f87 !important;
 	}
+	.bg-hd-trans{
+		background-color: #89b9f3 !important;
+
+	}
+	
 	.bg-red{
 		background-color: #d71921 !important;
 	}
@@ -108,6 +116,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
 	}
+	:root{
+            --color-primary: #89b9f3;
+            --color-second: <?= $style['ColorSecond']; ?>;
+            --color-bg: <?= $style['ColorBG']; ?>;
+            --color-bg-page: <?= $style['ColorBGHeaderPage']; ?>;
+
+            --color-mobile-nav: <?= $style['ColorMobileNavBg']; ?>;
+            --color-mobile-nav-a: <?= $style['ColorMobileNavAnc']; ?>;
+        }
 	</style>
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -136,7 +153,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- ======= Hedear ====== -->
 
 <header class="header">
-		<div id="topbar" class="py-1">
+	<div id="topbar" class="py-1">
         <div class="container">
             <div class="social-links col">
                 <a href="javascript:void(0)" data-lang="Ind" class="btn-change-lang mx-2"><img class="flag-lang " width="20px" src="<?=base_url('assets/img/in.png')?>"> Ind</a>
@@ -164,26 +181,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<a href="<?= base_url() ?>" class="nav-link text-uppercase text-blue text-hover-red"><lang>Home</lang></a>
 						</li>
 						<li class="nav-item px-3 dropdown">
-							<a href="<?= base_url('about') ?>" class="nav-link text-uppercase text-hover-red dropdown-toggle text-blue" id="navbarDropdownMenuLink-555" 
+							<a href="" class="nav-link text-uppercase text-hover-red dropdown-toggle text-blue" id="navbarDropdownMenuLink-555" 
 								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><lang>About Us</lang></a>
 							<div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink-555">
-								<a class="dropdown-item" href="#"><lang>Vision and Mission</lang></a>
-								<a class="dropdown-item" href="#"><lang>Organizational Structure</lang></a>
-								<a class="dropdown-item" href="#"><lang>SPMI Committee</lang></a>
-								<a class="dropdown-item" href="#"><lang>Target and Program</lang></a>
-								<a class="dropdown-item" href="#"><lang>Activity</lang></a>
-								<a class="dropdown-item" href="#"><lang>Event</lang></a>
+								<a class="dropdown-item" href="<?= base_url('vision-mision') ?>"><lang>Vision</lang> & <lang>Mission</lang></a>
+								<a class="dropdown-item" href="<?= base_url('organizational-structure') ?>"><lang>Organizational Structure</lang></a>
+								<a class="dropdown-item" href="<?= base_url('committee') ?>"><lang>SPMI Committee</lang></a>
+								<a class="dropdown-item" href="<?= base_url('target-program') ?>"><lang>Target and Program</lang></a>
+								<!-- <a class="dropdown-item" href=""><lang>Activity</lang></a> -->
+								<a class="dropdown-item" href="<?= base_url('event') ?>"><lang>Event</lang></a>
 							</div>
 						</li>
 						<li class="nav-item px-3">
-							<a href="<?= base_url('about') ?>" class="nav-link text-uppercase text-blue text-hover-red"><lang>News</lang></a>
+							<a href="<?= base_url('news') ?>" class="nav-link text-uppercase text-blue text-hover-red"><lang>News</lang></a>
 						</li>
 						<li class="nav-item px-3 dropdown">
-							<a href="<?= base_url('contact') ?>" class="nav-link text-uppercase text-hover-red dropdown-toggle text-blue" id="navbarDropdownMenuLink-555" 
+							<a href="" class="nav-link text-uppercase text-hover-red dropdown-toggle text-blue" id="navbarDropdownMenuLink-555" 
 								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><lang>Document</lang></a>
 							<div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink-555">
-								<a class="dropdown-item" href="#"><lang>Knowledge Base</lang></a>
-								<a class="dropdown-item" href="#"><lang>Accreditation</lang></a>
+								<a class="dropdown-item" href="<?= base_url('knowledge') ?>"><lang>Knowledge Base</lang></a>
+								<a class="dropdown-item" href="<?= base_url('acreditas') ?>"><lang>Accreditation</lang></a>
 							</div>
 						</li>
 						<li class="nav-item px-3">
@@ -200,9 +217,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Navbar -->
 <!-- ======= Hedear ====== -->
 <!-- ======= Content ====== -->
-
+<content>
 <?= $content ?>
-
+</content>
 
 <!-- ======= Content ====== -->
 <!-- ======= Footer ====== -->
