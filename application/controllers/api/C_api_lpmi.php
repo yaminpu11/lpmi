@@ -54,14 +54,19 @@ class C_api_lpmi extends CI_Controller {
     public function GetDataContent(){
         $data_arr = $this->getInputToken2();
         $IDType = $data_arr['IDType'];
-        // print_r($IDType).die();
-        $data = $this->db->query('SELECT c.*, l.language, ct.Label 
-            FROM db_lpmi.content c 
-            LEFT JOIN db_lpmi.content_type ct ON (ct.ID = c.IDType)
-            LEFT JOIN db_lpmi.language l ON (l.ID = ct.LangID)
-            WHERE c.IDType ='.$IDType.' ')->result_array();
+
+        $data = $this->db->select('c.*, l.language, ct.Label')
+                        ->from('db_lpmi.content c')
+                        ->join('db_lpmi.content_type ct', 'ct.ID = c.IDType', 'left')
+                        ->join('db_lpmi.language l', 'l.ID = ct.LangID', 'left')
+                        ->where('c.IDType', $IDType)
+                        ->order_by('c.ID', 'DESC')
+                        ->limit(1)
+                        ->get()
+                        ->result_array();
 
         return print_r(json_encode($data));
     }
+
 
 }
